@@ -19,6 +19,17 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  // CSS
+  // app.import('vendor/css/bootstrap-theme.min.css');
+  app.import('vendor/css/bootstrap.min.css');
+  app.import('vendor/css/bootstrap-datetimepicker.min.css');
+
+
+  // JS
+  app.import('vendor/js/bootstrap.min.js');
+  app.import('vendor/js/moment-with-locales.js');
+  app.import('vendor/js/bootstrap-datetimepicker.min.js');
+  app.import('vendor/js/socket.io-1.4.5.js');
 
   return app.toTree();
 };
