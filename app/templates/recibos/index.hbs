@@ -1,0 +1,66 @@
+<h1>Recibos list</h1>
+
+<p>
+  {{link-to "New Recibo" "recibos.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Nombreusuario
+        </th>
+        <th>
+          Nombreproducto
+        </th>
+        <th>
+          Cantidad
+        </th>
+        <th>
+          Precio
+        </th>
+        <th>
+          Total
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |recibo|}}
+        <tr>
+          <td>
+            {{recibo.nombreusuario}}
+          </td>
+          <td>
+            {{recibo.nombreproducto}}
+          </td>
+          <td>
+            {{recibo.cantidad}}
+          </td>
+          <td>
+            {{recibo.precio}}
+          </td>
+          <td>
+            {{recibo.total}}
+          </td>
+          <td>
+            {{link-to "Edit" "recibos.edit" recibo}}
+          </td>
+          <td>
+            {{link-to "Show" "recibos.show" recibo}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" recibo}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Recibos found
+  </p>
+{{/if}}

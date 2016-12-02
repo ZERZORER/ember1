@@ -1,0 +1,41 @@
+<form {{action "save" on="submit"}}>
+  <div>
+    <label>
+      Usuario:
+      {{input type="text" value=model.nombreusuario placeholder=Usuario.first.nombre}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Producto:
+      {{input type="text" value=model.nombreproducto}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Cantidad:
+      {{input type="text" value=model.cantidad}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Precio:
+      {{input type="text" value=model.precio}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Total: 
+      {{input type="text" value=model.total}}
+    </label>
+  </div>
+  <div>
+    <input type="submit" value="Comprar" class="button">
+  </div>
+  <br>
+  <div>
+  {{#link-to 'products' class="button"}}
+    Regresar
+  {{/link-to}}
+  </div>
+</form>

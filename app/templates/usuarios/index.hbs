@@ -1,0 +1,72 @@
+<h1>Usuarios list</h1>
+
+<p>
+  {{link-to "New Usuario" "usuarios.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Nombre
+        </th>
+        <th>
+          Paterno
+        </th>
+        <th>
+          Materno
+        </th>
+        <th>
+          Direccion
+        </th>
+        <th>
+          Correo
+        </th>
+        <th>
+          Telefono
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |usuario|}}
+        <tr>
+          <td>
+            {{usuario.nombre}}
+          </td>
+          <td>
+            {{usuario.paterno}}
+          </td>
+          <td>
+            {{usuario.materno}}
+          </td>
+          <td>
+            {{usuario.direccion}}
+          </td>
+          <td>
+            {{usuario.correo}}
+          </td>
+          <td>
+            {{usuario.telefono}}
+          </td>
+          <td>
+            {{link-to "Edit" "usuarios.edit" usuario}}
+          </td>
+          <td>
+            {{link-to "Show" "usuarios.show" usuario}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" usuario}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Usuarios found
+  </p>
+{{/if}}

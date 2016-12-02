@@ -1,0 +1,11 @@
+<div class="jumbo">
+  <h2>Bienvenido!</h2>
+  <p>
+  	La gente que ama comer siempre es la mejor gente.
+  </p>
+</div>
+
+
+{{#each model as |rentalUnit|}}
+      {{product-listing product=rentalUnit}}
+{{/each}}

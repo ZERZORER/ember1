@@ -1,4 +1,19 @@
 export default function() {
+this.get('/recibos');
+this.get('/recibos/:id');
+this.post('/recibos');
+this.del('/recibos/:id');
+this.patch('/recibos/:id');
+this.get('/usuarios');
+this.get('/usuarios/:id');
+this.post('/usuarios');
+this.del('/usuarios/:id');
+this.patch('/usuarios/:id');
+this.get('/products');
+this.get('/products/:id');
+this.post('/products');
+this.del('/products/:id');
+this.patch('/products/:id');
 this.get('/users');
 this.get('/users/:id');
 this.post('/users');

@@ -1,0 +1,41 @@
+<form {{action "save" on="submit"}}>
+  <div>
+    <label>
+      Nombre
+      {{input type="text" value=model.nombre}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Paterno
+      {{input type="text" value=model.paterno}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Materno
+      {{input type="text" value=model.materno}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Direccion
+      {{input type="text" value=model.direccion}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Correo
+      {{input type="text" value=model.correo}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Telefono
+      {{input type="text" value=model.telefono}}
+    </label>
+  </div>
+  <div>
+    <input type="submit" value="Save">
+  </div>
+</form>

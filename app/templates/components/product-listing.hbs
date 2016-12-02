@@ -1,0 +1,19 @@
+<article class="listing">
+	<a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+  	<img src="{{product.image}}" alt="">
+  	<small>View Larger</small>
+  </a>
+  <h3>{{product.nombre}}</h3>
+  <div class="detail owner">
+    <span>Descripcion:</span> {{product.descripcion}}
+  </div>
+  <div class="detail type">
+    <span>Tipo:</span> {{product-property-type product.tipo}} - {{product.tipo}}
+  </div>
+  <div class="detail bedrooms">
+    <span>Precio:</span> {{product.precio}}
+    {{#link-to 'recibos.new' class="button"}}
+    Comprar
+  {{/link-to}}
+  </div>
+</article>

@@ -1,1 +1,28 @@
-{{outlet}}
+<div class="container">
+  <div class="menu">
+    {{#link-to 'index'}}
+      <h1 class="left">
+        <em>FOODQUICK</em>
+      </h1>
+    {{/link-to}}
+    <div class="left links">
+      {{#link-to 'products'}}
+        Productos
+      {{/link-to}}
+      {{#link-to 'usuarios'}}
+        Usuarios
+      {{/link-to}}
+      {{#link-to 'about'}}
+        Acerca de
+      {{/link-to}}
+      {{#link-to 'conctact'}}
+        Contacto
+      {{/link-to}}
+    </div>
+  </div>
+  <div class="body">
+
+    {{outlet}}
+
+  </div>
+</div>
